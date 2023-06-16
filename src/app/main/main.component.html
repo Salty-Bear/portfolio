@@ -1,0 +1,45 @@
+<div class="sidebar" >
+    <button routerLink="/" class="logo">
+    </button>
+    <div class="panel">
+        <ul>
+            <li>
+                <button routerLink="/about" class="btn btn-light">About  </button>
+            </li>
+            <li>
+                <button routerLink="/skill" class="btn btn-light">My Skills</button>
+            </li>
+            <li>
+                <button routerLink="/work" class="btn btn-light">Work</button>
+            </li>
+            <li>
+                <a href="https://mail.google.com/mail/u/0/?to=contactme.aryaman@gmail.com&su=Portfolio%20contact&body=Greetings!&bcc=NULL&fs=1&tf=cm"  target="_blank"><button class="btn btn-light"> Contact</button></a>
+            </li>
+            <li>
+                <button routerLink="/blog" class="btn btn-light">Blog</button>
+            </li>
+        </ul>
+    </div>
+    <audio class="songs" controls autoplay>
+        <source src="\assets\Sidepanel\Horror-Long-Version.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
+<div class="mobile_bar" *ngIf="isMobile">
+    <div class="layout">
+    <div class="dropup">
+        <button class="dropbtn">Salty Bear</button>
+        <div class="dropup-content">
+          <a routerLink="/">Home</a>
+          <a routerLink="/about">About</a>
+          <a routerLink="/skill">Skill</a>
+          <a routerLink="/work">Work</a>
+        </div>
+      </div>
+    </div>
+</div>
