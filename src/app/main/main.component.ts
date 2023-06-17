@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-main',
@@ -10,7 +12,7 @@ export class MainComponent {
   
   isMobile = false;
   isSidebarVisible = false;
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.checkScreenWidth();
@@ -21,4 +23,10 @@ export class MainComponent {
     this.isMobile = window.innerWidth <= 768;
     if(this.isMobile) this.isSidebarVisible=true;
   }
+
+  
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open("Signed in Successfully");
+  }
+
 }
