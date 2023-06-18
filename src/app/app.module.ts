@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 //COMPONENT IMPORTS 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
+import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 
 //APP-ROUTING Import
@@ -29,7 +32,17 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
-import { LoginComponent } from './login/login.component';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import {NgIf} from '@angular/common';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { AuthService } from './shared/auth.service';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +50,10 @@ import { LoginComponent } from './login/login.component';
     MainComponent,
     HomeComponent,
     BlogComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
   ],
+  entryComponents: [LoginComponent],
   imports: [
     BrowserModule,
     appRoutingModule,
@@ -55,10 +70,18 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgIf,
+    MatCardModule,
+    MatListModule,
+    MatDividerModule,
+    MatDialogModule,
+    HttpClientModule
   ],
   exports: [MatExpansionModule],
-  providers: [],
+  providers: [MainComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

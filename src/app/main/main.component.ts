@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
+import { LoginService } from '../service/login.service';
+
+
 
 
 @Component({
@@ -9,10 +14,11 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-  
+
+
   isMobile = false;
   isSidebarVisible = false;
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(public log:LoginService,public _snackBar: MatSnackBar,public dialog: MatDialog) { }
 
   ngOnInit() {
     this.checkScreenWidth();
@@ -24,9 +30,18 @@ export class MainComponent {
     if(this.isMobile) this.isSidebarVisible=true;
   }
 
+ 
   
   openSnackBar(message: string, action: string) {
     this._snackBar.open("Signed in Successfully");
   }
+
+  openDialog(){
+    this.dialog.open(LoginComponent,{
+      // width:'20%',
+      // height:'40%',
+    });
+  }
+
 
 }

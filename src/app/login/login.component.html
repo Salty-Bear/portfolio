@@ -1,1 +1,24 @@
-<p>login works!</p>
+
+
+<div>
+  <p class="head"><mat-label>Login Form</mat-label> </p> 
+ <p class="input">  <mat-form-field appearance="fill" color="accent">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [(ngModel)]="email" required>
+      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+  </p> 
+ <p class="input"> <mat-form-field  color="accent">
+    <mat-label>Enter your password</mat-label>
+    <input matInput  [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+</p>
+</div>
+<div mat-dialog-actions>
+  <button class="btn" mat-button (click)="onNoClick()">No Thanks</button>
+  <button class="btn" mat-button (click)="openSnackBar()">Login</button>
+</div>

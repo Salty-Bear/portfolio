@@ -1,0 +1,18 @@
+
+.head{
+    margin-left: 35%;
+    font-family: Roboto;
+    font-variant: small-caps;
+    font-size: larger   ;
+}
+
+
+.input{
+    /* margin-left: 10%; */
+}
+
+.btn{
+    position: relative;
+    left: 15%;
+    bottom: 50%;
+}
