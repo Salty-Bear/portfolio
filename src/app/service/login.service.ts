@@ -23,7 +23,7 @@ interface LoginResponseData {
 
 
 export class LoginService {
-  public _isAuthenticatedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public _isAuthenticatedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
   public isAuthenticatedObs: Observable<boolean> = this._isAuthenticatedSubject.asObservable();
 
 

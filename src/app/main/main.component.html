@@ -5,22 +5,22 @@
     <div class="panel">
         <ul>
             <li>
-                <button routerLink="/about" class="btn btn-light">About  </button>
+                <button mat-button routerLink="/about" class="but">About  </button>
             </li>
             <li>
-                <button routerLink="/skill" class="btn btn-light">My Skills</button>
+                <button mat-button  routerLink="/skill" class="but">My Skills</button>
             </li>
             <li>
-                <button routerLink="/work" class="btn btn-light">Work</button>
+                <button mat-button routerLink="/work" class="but">Work</button>
             </li>
             <li>
-                <a href="https://mail.google.com/mail/u/0/?to=contactme.aryaman@gmail.com&su=Portfolio%20contact&body=Greetings!&bcc=NULL&fs=1&tf=cm"  target="_blank"><button class="btn btn-light"> Contact</button></a>
+                <a href="https://mail.google.com/mail/u/0/?to=contactme.aryaman@gmail.com&su=Portfolio%20contact&body=Greetings!&bcc=NULL&fs=1&tf=cm"  target="_blank"><button mat-button class="but"> Contact</button></a>
             </li>
             <li>
-                <button routerLink="/blog" class="btn btn-light">Blog</button>
+                <button mat-button routerLink="/blog" class="but">Blog</button>
             </li>
             <li>
-                <button class="btn btn-light" routerLink="/admin" *ngIf="log.isAuthenticatedObs | async">Admin</button>
+                <button  mat-button class="btn btn-light" class="but" routerLink="/admin" *ngIf="log.isAuthenticatedObs | async">Admin</button>
             </li>
 
             

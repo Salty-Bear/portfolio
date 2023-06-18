@@ -1,0 +1,9 @@
+.section{
+    position: absolute;
+    top: 1%;
+    left: 11%;
+    width: 88%;
+    height: 95%;
+    border-radius: 2%;
+    align-self: center;
+}

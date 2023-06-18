@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { MyskillsComponent } from './myskills/myskills.component';
 
 //APP-ROUTING Import
 import { appRoutingModule } from './app-routing.module';
@@ -44,6 +45,7 @@ import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angula
 import { AuthService } from './shared/auth.service';
 import { AdminComponent } from './admin/admin.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,7 @@ import { AdminComponent } from './admin/admin.component';
     BlogComponent,
     LoginComponent,
     AdminComponent,
+    MyskillsComponent
   ],
   entryComponents: [LoginComponent],
   imports: [
