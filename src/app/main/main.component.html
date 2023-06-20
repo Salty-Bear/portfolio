@@ -1,4 +1,4 @@
-<button class="sign" (click)="openDialog()" mat-raised-button >Sign in</button>
+<button class="sign" *ngIf="!(log.isAuthenticatedObs | async)" (click)="openDialog()" mat-raised-button >Sign in</button>
 <div class="sidebar" >
     <button routerLink="/" class="logo">
     </button>

@@ -1,0 +1,25 @@
+.box1{
+    width: 85vh;
+    height: 85vh;
+    text-align: center;
+
+}
+
+h3{
+    font-family: Poppins;
+    font-weight: 10;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .label{
+    right:0
+  }

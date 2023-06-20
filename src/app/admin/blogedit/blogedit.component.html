@@ -1,9 +1,24 @@
 
 <mat-grid-list cols="2" rowHeight="1:1" gutterSize="10px">
+  {{blogs}}
     <mat-grid-tile>
         <mat-card  class="box1">
             <mat-card-content >
                 <h3>List</h3>
+                <mat-accordion *ngFor="let item of blogs">
+                  <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title color>
+                        {{item.title}}
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        {{item.brief}}
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>{{item.description}}</p>
+                  </mat-expansion-panel>
+                </mat-accordion>
+                
             </mat-card-content>
           </mat-card>          
     </mat-grid-tile>
@@ -17,30 +32,28 @@
                     <label class="label">Title</label> 
                     <mat-form-field class="example-full-width">
                     <mat-label>Title</mat-label>
-                    <input matInput placeholder="Ex. Pizza" value="">
+                    <input matInput placeholder="Ex. Pizza"  [(ngModel)]="item.title" name="title">
                     </mat-form-field>
                      </p>
-
                      <p>
                         <label class="label">Brief</label> 
                         <mat-form-field class="example-full-width">
                         <mat-label>brief</mat-label>
-                        <input matInput placeholder="Ex. Pizza" value="">
+                        <input matInput placeholder="Ex. Pizza" value="" [(ngModel)]="item.brief" name="brief">
                         </mat-form-field>
                     </p>
                     <p>
                     <label class="label">Description</label> 
                     <mat-form-field class="example-full-width">
                       <mat-label>Leave a comment</mat-label>
-                      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                      <textarea [(ngModel)]="item.description" matInput placeholder="Ex. It makes me feel..." name="description"></textarea>
                     </mat-form-field>
                     </p>
                   </form>
-                  <button mat-raised-button color="warn">Add</button>
+                  <button mat-raised-button color="warn" (click)="add()">Add</button>
             </mat-card-content>
           </mat-card>
           
     </mat-grid-tile>
-
   </mat-grid-list>
   

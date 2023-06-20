@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit  } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-work',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./work.component.css']
 })
 export class WorkComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+
+  ngOnInit(){
+    Aos.init();
+  }
+
+
 }

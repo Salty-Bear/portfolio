@@ -9,9 +9,7 @@
     background-color: #EEEEEE;
     overflow-y: scroll;
 
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+
 }
 
 .heading{
@@ -21,7 +19,7 @@
 
 h2{
     font-size: 4em;
-    font-family: Metal Mania;
+    font-family: Poppins;
     font-weight: 500;
     font-variant: small-caps;
     color: red;
@@ -34,7 +32,7 @@ h2{
 
 .lebel{
     font-size: 1.5em;
-    font-family: Metal Mania;
+    font-family: Poppins;
     word-spacing: 20%;
 }
 
@@ -44,7 +42,7 @@ h2{
 
 .headi{
     font-size: 2em;
-    font-family: Metal Mania;
+    font-family: Poppins;
     color: red;
     padding-top: 10%em;
     margin: 0;

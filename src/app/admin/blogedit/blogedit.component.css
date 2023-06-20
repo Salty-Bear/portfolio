@@ -23,3 +23,11 @@ h3{
   .label{
     right:0
   }
+
+  .mat-expansion-panel-header{
+    background: rgb(240, 238, 238);
+  }
+
+  .mat-expansion-panel-header.mat-expanded{
+    background: rgb(240, 238, 238);
+  }

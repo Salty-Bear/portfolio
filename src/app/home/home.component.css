@@ -3,20 +3,20 @@
     width: 100%;
     left: 5%;
     top: 20%;
-    font-family: Metal Mania;
+    font-family: Poppins;
 
+    background-color: transparent;
     background-color: #EEEEEE;
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+
 }
 
 h1{
     font-size: 500%;
+    background-color: transparent;
 }
 
 .name{
-    position: relative;
+    position: relative;background-color: transparent;
 }
 
 .myname{
@@ -397,7 +397,7 @@ h1{
     align-self: center;
     background-color: #EEEEEE;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -409,6 +409,19 @@ h1{
     }
 
     .intro{
-        width: 70%;
+        position: absolute;
+        top: 10vh;
+        width: 100%;
+        font-size: 65%;
+    }
+    .art{
+        position: absolute;
+        top: 44%;
+        left: 0;
+        margin: 0;
+    }
+    .myname{
+        width: 25%;
+        overflow-y: auto;
     }
   }

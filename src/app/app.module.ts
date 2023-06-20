@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ItemserviceService } from './service/itemservice.service';
 
 //COMPONENT IMPORTS 
 import { AppComponent } from './app.component';
@@ -44,6 +47,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import { AuthService } from './shared/auth.service';
 import { AdminComponent } from './admin/admin.component';
+import { BlogeditComponent } from './admin/blogedit/blogedit.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { UrlshortnerComponent } from './admin/urlshortner/urlshortner.component';
+import { CloudspaceComponent } from './admin/cloudspace/cloudspace.component';
 
 
 @NgModule({
@@ -54,7 +61,11 @@ import { AdminComponent } from './admin/admin.component';
     BlogComponent,
     LoginComponent,
     AdminComponent,
-    MyskillsComponent
+    MyskillsComponent,
+    BlogComponent,
+    BlogeditComponent,
+    UrlshortnerComponent,
+    CloudspaceComponent
   ],
   entryComponents: [LoginComponent],
   imports: [
@@ -81,10 +92,12 @@ import { AdminComponent } from './admin/admin.component';
     MatListModule,
     MatDividerModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    AngularFireModule.initializeApp(environment.firebase,'angularfs')
   ],
   exports: [MatExpansionModule],
-  providers: [MainComponent],
+  providers: [MainComponent,ItemserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

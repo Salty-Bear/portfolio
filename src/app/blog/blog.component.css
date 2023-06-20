@@ -8,10 +8,8 @@
     align-self: center;
     background-color: #EEEEEE;
 
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    overflow-y:scroll;
+
+    overflow-y:auto;
 }
 
 .topi{
@@ -24,7 +22,7 @@
 
   .head{
     text-align: center;
-    font-family: Metal Mania;
+    font-family: Poppins;
     font-variant: small-caps;
 }
 

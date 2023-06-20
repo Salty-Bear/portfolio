@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+ngOnInit(){
+  Aos.init();
+}
+
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatExpansionModule} from '@angular/material/expansion';
+import * as Aos from 'aos';
 
 
 @Component({
@@ -9,5 +10,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 })
 export class BlogComponent {
-  panelOpenState = false;
+  
+  ngOnInit(){
+    Aos.init();
+  }
 }
