@@ -69,13 +69,13 @@
 
     .section{
         left: 0;
-        width: 100%;
-        overflow-x: hidden;
+        width: 50vh;
         justify-content: center;
+        text-align: center;
     }
 
     .topi{
-        width: 100%;
+        width: 56vh;
         border-radius: 0;
     }
     
